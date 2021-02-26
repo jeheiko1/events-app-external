@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo 'workspace and versions' 
                 sh 'echo $WORKSPACE'
-                sh 'docker --version'
+                //sh 'docker --version'
                 sh 'gcloud version'
                 sh 'nodejs -v'
                 sh 'npm -v'
@@ -55,7 +55,7 @@ pipeline {
          stage('Stage 5') {
             steps {
                 echo 'Get cluster credentials'
-                sh 'gcloud container clusters get-credentials jenkins-instance-2 --zone us-central1-a --project roidtc-feb113'
+                sh 'gcloud container clusters get-credentials cluster-1 --zone us-central1-c --project roidtc-feb113'
                 echo 'Update the image'
                 echo "gcr.io/roidtc-feb113/internal:2.${env.BUILD_ID}"
                 sh "kubectl set image deployment/demo-ui demo-ui=gcr.io/roidtc-feb113/internal:v2.${env.BUILD_ID} --record"
