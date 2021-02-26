@@ -6,22 +6,95 @@
   <title>Team Cloud 9 Website</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-
-</head>
-<!-- This section controls the style of the webpage -->
 <style>
-    body{
-        background-image: radial-gradient(rgba(205, 43, 226, 0.336), rgba(144, 43, 226, 0.685));
-        text-align: center;
-    }    
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
 </style>
+</head>
 
 <body>
-  <div>
-      <h1 style="color: darkgreen;"><i>Welcome to Cloud 9's application</i></h1>
-      <b>Our team members are: Jenn, Prem, Gus, Dave and JP!</b>
-    {{{body}}}
-</div>
+
+<h2>Check out Team Cloud9's cool app</h2>
+<p><strong>Note:</strong> Webpage is in development</p>
+
+<header>
+  <h2 style="color: yellow ;"><i>Welcome to Cloud 9's application &#128525</i></h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#"><em>Event</em></a></li>
+      <li><a href="#">Location</a></li>
+      <li><a href="#">RSVP</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Home</h1>
+    <p>This application is being developed by Jenn, Prem, Gus, Dave and JP!</p>
+    <p>Cloud9 will allow users to post and share their content with the world</p>
+    <body>
 <div>
   <h2>Add an event</h2>
     <form action="/event" method="post">
@@ -31,5 +104,23 @@
         <input type="submit" name="submit" value="submit" />
     </form>
   </div>
+  <p>checking</p>
 </body>
 </html>
+  </article>
+</section>
+
+<footer>
+  <p>No copyrights yet!!</p>
+</footer>
+
+</body>
+</html>
+
+<!-- This section controls the style of the webpage -->
+<style>
+    body{
+        background-image: radial-gradient(rgba(205, 43, 226, 0.336), rgba(144, 43, 226, 0.685));
+        text-align: center;
+    }    
+</style>
